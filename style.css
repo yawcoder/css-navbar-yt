@@ -1,0 +1,104 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 13px;
+    height: 80px;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.logo{
+    margin: 0 1.5em;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li{
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+}
+nav ul li:hover{
+    border-bottom: solid 2px rgb(0, 136, 169);
+}
+.cta{
+    margin: 0 1.5em;
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 0.6);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.cta:hover{
+    background-color: rgba(0, 136, 169, 1);
+    transform: scale(1.1);
+}
+
+#check{
+    display: none;
+}
+.checkbtn{
+    font-size: 1.5rem;
+    display: none;
+}
+.checkbtn:hover{
+    cursor: pointer;
+}
+
+@media(max-width: 800px){
+    .checkbtn{
+        display: inline-block;
+        transition: all 0.3s linear;
+    }
+    nav{
+        height: 60px;
+    }
+    nav ul{
+        position: fixed;
+        width: 0;
+        height: 100vh;
+        display: block;
+        background: #fff;
+        top: 60px;
+        right: 0;
+        text-align: center;
+        transition: all .3s;
+    }
+    .show-links{
+        width: 70%;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        box-shadow: -5px 1px 5px 0px rgba(0, 0, 0, 0.3);
+
+    }
+    nav ul li{
+        display: block;
+        margin: 2.5rem 7rem;
+        line-height: 30px;
+    }
+    #check:checked ~ .checkbtn{
+        transform: rotate(90deg);
+    }
+    .logo{
+        margin: 0;
+    }
+    .cta{
+        font-size: 1rem;
+    }
+}
